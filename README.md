@@ -2,6 +2,19 @@
 
 This is an app that shows general information about your computer and system resources like memory available, used and max sems, ports, threads and teams. Theese are showed on a status bars. This app also shows file system informations for mounted file systems. Shows disk space and used disk space. This is showed on a status bar too.
 
+# Information #
+
+ - Platform: _BeOS (x86)_
+ - Programming language: _C++_
+ - Creation date: _2000-12-15_
+ - Modification time: _2001-02-03_
+
+# Screenshot #
+
+![D System Info Screenshot](https://raw.github.com/diegolagoglez/DSystemInfo/master/art/dsysteminfo.jpg "D System Info Screenshot")
+
+# Changelog #
+
 Release 2.5:
  - Added a menu bar with a new option that shows more info about the volume.
  - Added an "About" menu that shows credits.
