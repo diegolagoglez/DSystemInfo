@@ -4,10 +4,10 @@ This is an app that shows general information about your computer and system res
 
 # Information #
 
- - Platform: _BeOS (x86)_
- - Programming language: _C++_
- - Creation date: _2000-12-15_
- - Modification time: _2001-02-03_
+ - Platform: __BeOS (x86)__
+ - Programming language: __C++__
+ - Creation date: __2000-12-15__
+ - Modification time: __2001-02-03__
 
 # Screenshot #
 
