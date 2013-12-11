@@ -32,3 +32,5 @@ Release 1.0:
  - Only support one processor.
  - Cannot update the menu field when an item is mounted.
  - Cannot update used space status bar dynamically.
+
+> NOTE: Choosing version numbers at that time was not one of my skills (maybe not today either). DSystemInfo version should be 0.3 ;)
