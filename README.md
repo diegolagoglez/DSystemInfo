@@ -8,6 +8,8 @@ This is an app that shows general information about your computer and system res
  - Programming language: __C++__
  - Creation date: __2000-12-15__
  - Modification time: __2001-02-03__
+ - License: __GPLv2__
+ - Original download page: [DSytemInfo at BeBits](http://bebits.com/app/1831)
 
 # Screenshot #
 
