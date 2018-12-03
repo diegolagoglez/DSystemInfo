@@ -4,7 +4,7 @@ OBJS := $(SRCS:%.cpp=%.o)
 EXE_NAME := DSystemInfo
 
 LIB_INCLUDE_DIR := /boot/system/lib
-LINKER_LIBS := -lroot -lbe
+LINKER_LIBS := -lstdc++ -lroot -lbe
 
 all: binary
 
