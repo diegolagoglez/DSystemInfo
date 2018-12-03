@@ -9,7 +9,7 @@ LINKER_LIBS := -lstdc++ -lroot -lbe
 all: binary
 
 %.o: %.cpp
-	gcc -c $<
+	gcc -c $< -o $@
 
 binary: $(OBJS)
 	gcc -I$(LIB_INCLUDE_DIR) $(LINKER_LIBS) -o $(EXE_NAME) $(OBJS)
