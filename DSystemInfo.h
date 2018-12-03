@@ -16,7 +16,7 @@
 class DSystemInfo : public BApplication
 {
   public:
-    DSystemInfo(char* sig);
+    DSystemInfo(const char* sig);
     
   private:
     DSystemInfoWindow* SysInfoWindow;
