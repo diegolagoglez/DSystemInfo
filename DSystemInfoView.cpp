@@ -52,19 +52,22 @@ DSystemInfoView::DSystemInfoView(BRect frame, char* name, uint32 resizingMode, u
   AuxString.SetTo("");;
   AddChild(fKernel);
   
-  AuxString << "Platform: " << GetPlatformString(fSystemInfo.platform_type);
+//  AuxString << "Platform: " << GetPlatformString(fSystemInfo.platform_type);
+  AuxString << "Platform: UNIMPLEMENTED";
   fPlatform = new BStringView(BRect(kStatusBarBasePosX + 160,kGenInfoBasePosY + 18,kStatusBarBasePosX + 320,kGenInfoBasePosY + 28),"Platform",AuxString.String());
   fPlatform->SetFont(DSIPlainFont);
   AuxString.SetTo("");
   AddChild(fPlatform);
   
-  AuxString << "CPU: " << GetCPUString(fSystemInfo.cpu_type);
+//  AuxString << "CPU: " << GetCPUString(fSystemInfo.cpu_type);
+  AuxString << "CPU: UNIMPLEMENTED";
   fCPU = new BStringView(BRect(kStatusBarBasePosX,kGenInfoBasePosY + 36,kStatusBarBasePosX + 150,kGenInfoBasePosY + 46),"CPU",AuxString.String());
   fCPU->SetFont(DSIPlainFont);
   AuxString.SetTo("");
   AddChild(fCPU);
   
-  AuxString << "CPU clock: " << fSystemInfo.cpu_clock_speed / 1000000 << " MHz.";
+//  AuxString << "CPU clock: " << fSystemInfo.cpu_clock_speed / 1000000 << " MHz.";
+  AuxString << "CPU clock: UNIMPLEMENTED";
   fCPUClock = new BStringView(BRect(kStatusBarBasePosX + 160,kGenInfoBasePosY + 36,kStatusBarBasePosX + 320,kGenInfoBasePosY + 46),"CPU Clock",AuxString.String());
   fCPUClock->SetFont(DSIPlainFont);
   AuxString.SetTo("");
@@ -270,7 +273,7 @@ DSystemInfoView::UpdateFileSystemStatusBar(char* label, char* trailing, float Ca
   fFileSystemSpace->Update((float)Capacity - FreeBytes,label,trailing);
 }
 
-char* 
+/*char* 
 DSystemInfoView::GetPlatformString(platform_type platform)
 // gets the platform name
 {
@@ -291,9 +294,9 @@ DSystemInfoView::GetPlatformString(platform_type platform)
     case B_NINTENDO_64_PLATFORM: return "Nintendo 64"; break;
     default: return "Platform unknown";
   }
-}
+}*/
 
-char*
+/*char*
 DSystemInfoView::GetCPUString(cpu_type cpu)
 // gets the CPU name
 {
@@ -351,7 +354,7 @@ DSystemInfoView::GetCPUString(cpu_type cpu)
     case B_CPU_RISE_mP6 : return "Rise mP6"; break;
     default: return "CPU type unknown"; break;
   }
-}
+}*/
 
 char*
 DSystemInfoView::GetFSStatDev(void)

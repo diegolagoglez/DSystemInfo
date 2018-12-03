@@ -67,8 +67,8 @@ class DSystemInfoView : public BView
     BStatusBar* fThreadsStatusBar;
     BStatusBar* fTeamsStatusBar;
     
-    char* GetPlatformString(platform_type platform); 
-    char* GetCPUString(cpu_type cpu);
+//    char* GetPlatformString(platform_type platform);
+//     char* GetCPUString(cpu_type cpu); 
     char* GetFSStatDev(void);
     
     void ConstructVolumeMenu(BMenu*);
