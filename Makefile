@@ -17,4 +17,4 @@ binary: $(OBJS)
 .PHONY: all clean
 
 clean:
-	rm -f *.o $(EXE_NAME)
+	rm -f $(OBJS) $(EXE_NAME)
