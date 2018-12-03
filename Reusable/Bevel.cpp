@@ -1,7 +1,6 @@
 #include "Bevel.h"
 
-DBevel::DBevel(BRect frame,const char* name,BevelKind Kind,uint32 resizingMode = B_FOLLOW_LEFT | B_FOLLOW_TOP,uint32 flags = B_WILL_DRAW) :
-        BView(frame,name,resizingMode,flags)
+DBevel::DBevel(BRect frame, const char* name, BevelKind Kind, uint32 resizingMode, uint32 flags) : BView(frame, name, resizingMode, flags)
 {
   fKind = Kind;
   SetDrawingMode(B_OP_OVER);
