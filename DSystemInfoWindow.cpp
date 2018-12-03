@@ -6,7 +6,7 @@
 
 DSystemInfoWindow::DSystemInfoWindow(BRect frame) : BWindow(frame,"D System Info",B_TITLED_WINDOW,B_NOT_RESIZABLE)
 {
-  fSysInfoView = new DSystemInfoView(BRect(0,20,Bounds().right,Bounds().bottom),"DSystemInfoView",B_FOLLOW_ALL_SIDES,B_WILL_DRAW | B_PULSE_NEEDED);
+  fSysInfoView = new DSystemInfoView(BRect(0, 20, Bounds().right, Bounds().bottom),"DSystemInfoView", B_FOLLOW_ALL_SIDES, B_WILL_DRAW | B_PULSE_NEEDED);
   fSysInfoView->AttachedToWindow();
   AddChild(fSysInfoView);
   fSysInfoView->UpdateSystemInfo();
@@ -70,7 +70,7 @@ DSystemInfoWindow::MessageReceived(BMessage* message)
     }
     
     case B_ABOUT_REQUESTED: {
-      (BAlert*)(new BAlert("chairman","D System Info release 2.5\nBuild: 22/12/2000\n\nCreated by Diego Lago a.k.a. chairman \n[León -> Spain]\n\nThanks to Héctor López a.k.a. Leven for his help and discover BeOS to me. Thanks to all the people who help me when I need it. Thanks to Be Inc. for make BeOS.\n\nchairman@bemail.org\nwww.geocities.com/dr_chairman","hehe!"))->Go();
+      (new BAlert("Diego","D System Info release 0.2.6.\nBuild: 2018-12-03\n\nCreated by Diego Lago\n\nThanks to Héctor López for his help and discover BeOS to me. Thanks to all the people who help me when I need it. Thanks to Be Inc. for make BeOS and thanks to Haiku team.\n\ndiego.lago.gonzalez@gmail.com","hehe!"))->Go();
       break;
     }
     
@@ -98,7 +98,7 @@ bool
 DSystemInfoWindow::QuitRequested(void)
 // close the window and the app
 {
-  (DSystemInfo*)be_app->PostMessage(B_QUIT_REQUESTED);
+  be_app->PostMessage(B_QUIT_REQUESTED);
   return true;
 }
 
