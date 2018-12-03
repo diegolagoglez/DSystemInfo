@@ -4,7 +4,7 @@
 //*   22/Dec/2000                  *
 //**********************************
 
-#include "SystemInfo.h"
+#include "DSystemInfo.h"
 
 int main(void)
 {
