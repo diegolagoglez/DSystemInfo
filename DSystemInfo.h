@@ -1,8 +1,8 @@
-//**********************************
-//*   D System Info release 2.5    *
-//*   Created by chairman (Spain)  *
-//*   22/Dec/2000                  *
-//**********************************
+//************************************************
+//*   D System Info release 0.2.6                *
+//*   Diego Lago <diego.lago.gonzalez@gmail.com> *
+//*   2018-12-03                                 *
+//************************************************
 
 #ifndef _SYSTEMINFO_H_
 #define _SYSTEMINFO_H_
