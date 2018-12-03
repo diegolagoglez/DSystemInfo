@@ -7,7 +7,7 @@
 #ifndef _SYSTEMINFO_H_
 #define _SYSTEMINFO_H_
 
-#define SystemInfoSignature "application/x-vnd.DSystemInfo"
+#define DSystemInfoSignature "application/x-vnd.DSystemInfo"
 
 #include <Application.h>
 
