@@ -41,7 +41,7 @@ void
 DSystemInfoWindow::MessageReceived(BMessage* message)
 {
   int32 DeviceID = 0;
-  char volName[20];
+  char volName[B_FILE_NAME_LENGTH];
   int64 Capacity, FreeBytes;
   BString label,trailing;
   
