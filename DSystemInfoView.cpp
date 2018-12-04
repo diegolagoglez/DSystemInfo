@@ -91,6 +91,7 @@ DSystemInfoView::DSystemInfoView(BRect frame, char* name, uint32 resizingMode, u
   fFileSystemSpace->SetBarHeight(12);
   fFileSystemSpace->SetFont(DSIPlainFont);
   fFileSystemSpace->SetBarColor(DarkBlue);
+  fFileSystemSpace->SetDrawingMode(B_OP_MIN);
   AddChild(fFileSystemSpace);
   
   fSystemRes = new BStringView(BRect(15,kStatusBarBasePosY - 20,125,kStatusBarBasePosY - 5),"SystemResources","System Resources");
@@ -102,22 +103,27 @@ DSystemInfoView::DSystemInfoView(BRect frame, char* name, uint32 resizingMode, u
   fMemStatusBar = new BStatusBar(BRect(kStatusBarBasePosX,kStatusBarBasePosY,kAppWidth - 15,0),"MemStatusBar","Memory pages");
   fMemStatusBar->SetBarHeight(12);
   fMemStatusBar->SetFont(DSIPlainFont);
+  fMemStatusBar->SetDrawingMode(B_OP_MIN);
   AddChild(fMemStatusBar);
   fSemStatusBar = new BStatusBar(BRect(kStatusBarBasePosX,kStatusBarBasePosY + 30,kAppWidth - 15,0),"SemStatusBar","Semaphores");
   fSemStatusBar->SetBarHeight(12);
   fSemStatusBar->SetFont(DSIPlainFont);
+  fSemStatusBar->SetDrawingMode(B_OP_MIN);
   AddChild(fSemStatusBar);
   fPortsStatusBar = new BStatusBar(BRect(kStatusBarBasePosX,kStatusBarBasePosY + 60,kAppWidth - 15,0),"PortsStatusBar","Ports");
   fPortsStatusBar->SetBarHeight(12);
   fPortsStatusBar->SetFont(DSIPlainFont);
+  fPortsStatusBar->SetDrawingMode(B_OP_MIN);
   AddChild(fPortsStatusBar);
   fThreadsStatusBar = new BStatusBar(BRect(kStatusBarBasePosX,kStatusBarBasePosY + 90,kAppWidth - 15,0),"ThreadsStatusBar","Threads");
   fThreadsStatusBar->SetBarHeight(12);
   fThreadsStatusBar->SetFont(DSIPlainFont);
+  fThreadsStatusBar->SetDrawingMode(B_OP_MIN);
   AddChild(fThreadsStatusBar);
   fTeamsStatusBar = new BStatusBar(BRect(kStatusBarBasePosX,kStatusBarBasePosY + 120,kAppWidth - 15,0),"TeamsStatusBar","Teams");
   fTeamsStatusBar->SetBarHeight(12);
   fTeamsStatusBar->SetFont(DSIPlainFont);
+  fTeamsStatusBar->SetDrawingMode(B_OP_MIN);
   AddChild(fTeamsStatusBar);
 }
 
