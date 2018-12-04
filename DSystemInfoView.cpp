@@ -223,7 +223,7 @@ void
 DSystemInfoView::UpdateSystemInfo(void)
 // update the status bars
 {
-  char volName[20];
+  char volName[B_FILE_NAME_LENGTH];
   BString label, trailing;
   volumeInfo->GetName(volName);
   int64 Capacity = volumeInfo->Capacity();
@@ -242,7 +242,7 @@ DSystemInfoView::UpdateSystemInfo(void)
   strMemPages << fSystemInfo.used_pages << " used of " << fSystemInfo.max_pages << " total";
   fMemStatusBar->SetMaxValue((float)fSystemInfo.max_pages);
   fMemStatusBar->Update((float)fSystemInfo.used_pages - fMemStatusBar->CurrentValue(),"",strMemPages.String());
-  
+
   BString strSemaphores;
   strSemaphores << fSystemInfo.used_sems << " used of " << fSystemInfo.max_sems << " max";
   fSemStatusBar->SetMaxValue((float)fSystemInfo.max_sems);
