@@ -70,7 +70,9 @@ DSystemInfoWindow::MessageReceived(BMessage* message)
     }
     
     case B_ABOUT_REQUESTED: {
-      (new BAlert("Diego","D System Info release 0.2.6.\nBuild: 2018-12-03\n\nCreated by Diego Lago\n\nThanks to Héctor López for his help and discover BeOS to me. Thanks to all the people who help me when I need it. Thanks to Be Inc. for make BeOS and thanks to Haiku team.\n\ndiego.lago.gonzalez@gmail.com","hehe!"))->Go();
+      (new BAlert("Diego", "D System Info release 0.2.6-20181204\n\nDiego Lago <diego.lago.gonzalez@gmail.com>\n\n"
+                  "Thanks to Héctor López for his help and discover BeOS to me. Thanks to all the people who help "
+                  "me when I need it. Thanks to Be Inc. for make BeOS and thanks to Haiku team.","hehe!"))->Go();
       break;
     }
     
