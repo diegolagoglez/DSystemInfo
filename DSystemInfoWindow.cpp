@@ -6,7 +6,7 @@
 
 DSystemInfoWindow::DSystemInfoWindow(BRect frame) : BWindow(frame,"D System Info",B_TITLED_WINDOW,B_NOT_RESIZABLE)
 {
-  fSysInfoView = new DSystemInfoView(BRect(0, 20, Bounds().right, Bounds().bottom),"DSystemInfoView", B_FOLLOW_ALL_SIDES, B_WILL_DRAW | B_PULSE_NEEDED);
+  fSysInfoView = new DSystemInfoView(BRect(0, 20, Bounds().right, Bounds().bottom), (char*)"DSystemInfoView", B_FOLLOW_ALL_SIDES, B_WILL_DRAW | B_PULSE_NEEDED);
   fSysInfoView->AttachedToWindow();
   AddChild(fSysInfoView);
   fSysInfoView->UpdateSystemInfo();
