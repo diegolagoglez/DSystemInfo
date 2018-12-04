@@ -8,10 +8,8 @@
 
 int main(void)
 {
-  DSystemInfo* SystemInfo = new DSystemInfo(DSystemInfoSignature);
+  DSystemInfo* SystemInfo = new DSystemInfo();
   SystemInfo->Run();
-  SystemInfo->Lock();
-  SystemInfo->Quit();
-  SystemInfo->Unlock();
+  delete SystemInfo;
   return 0;
 };
