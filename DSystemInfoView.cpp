@@ -58,7 +58,7 @@ DSystemInfoView::DSystemInfoView(BRect frame, char* name, uint32 resizingMode, u
   fPlatform->SetFont(DSIPlainFont);
   AuxString.SetTo("");
   AddChild(fPlatform);
-  
+
 //  AuxString << "CPU: " << GetCPUString(fSystemInfo.cpu_type);
   AuxString << "CPU: UNIMPLEMENTED";
   fCPU = new BStringView(BRect(kStatusBarBasePosX,kGenInfoBasePosY + 36,kStatusBarBasePosX + 150,kGenInfoBasePosY + 46),"CPU",AuxString.String());
@@ -72,7 +72,7 @@ DSystemInfoView::DSystemInfoView(BRect frame, char* name, uint32 resizingMode, u
   fCPUClock->SetFont(DSIPlainFont);
   AuxString.SetTo("");
   AddChild(fCPUClock);
-  
+
   AuxString << "Memory amount: " << (fSystemInfo.max_pages * B_PAGE_SIZE) / 1024 /1024 << " MB  (" << fSystemInfo.max_pages * B_PAGE_SIZE << " bytes).";
   fMemoryAmount = new BStringView(BRect(kStatusBarBasePosX,kGenInfoBasePosY + 54,kStatusBarBasePosX + 320,kGenInfoBasePosY + 64),"Bus clock",AuxString.String());
   fMemoryAmount->SetFont(DSIPlainFont);
@@ -387,20 +387,21 @@ DSystemInfoView::ConstructVolumeMenu(BMenu* menu)
 // contruct the menu field with all the volumes mounted
 {
   BVolumeRoster volRoster;
-  BVolume volume;
+  BVolume* volume = new BVolume();
   BMessage* message;
-  char buffer[20];
+  char buffer[B_FILE_NAME_LENGTH];
   dev_t DeviceID;
   
   volRoster.Rewind();
-  while(volRoster.GetNextVolume(&volume) == B_OK) {
-    if(volume.IsPersistent()) {
-      volume.GetName(buffer);    
-      DeviceID = volume.Device();
+  while(volRoster.GetNextVolume(volume) == B_OK) {
+    if(volume->IsPersistent()) {
+      volume->GetName(buffer);
+      DeviceID = volume->Device();
       message = new BMessage(kVolumeMessage);
       message->AddInt32("DevID",DeviceID);
       menu->AddItem(new BMenuItem(buffer,message));
     }
   }
+  delete volume;
   menu->SetTargetForItems(this);
 }
