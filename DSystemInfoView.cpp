@@ -203,7 +203,7 @@ DSystemInfoView::MessageReceived(BMessage* message)
       break;
     }
     case kVolumeMoreInfo: {
-      BAlert* FSMoreInfo = new BAlert("FSMoreInfo",(char*)GetFSStatDev(),"OK");
+      BAlert* FSMoreInfo = new BAlert("FSMoreInfo", (char*)GetFSStatDev(), "OK");
       FSMoreInfo->Go();
       break;
     }
@@ -351,7 +351,7 @@ DSystemInfoView::GetFSStatDev(void)
 {
   BString R;
   char* retBuffer = NULL;
-  char volName[32];
+  char volName[B_FILE_NAME_LENGTH];
   fs_info info;
   fs_stat_dev(volumeInfo->Device(),&info);
   volumeInfo->GetName(volName);
