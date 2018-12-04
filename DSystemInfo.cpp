@@ -4,10 +4,12 @@
 
 DSystemInfo::DSystemInfo() : BApplication(DSystemInfoSignature)
 {
-  BScreen *Screen = new BScreen();  // center the app in the screen with next lines
+  // center the app in the screen
+  BScreen *Screen = new BScreen();
   BRect Bounds(Screen->Frame());
   delete Screen;
   Screen = NULL;
+
   BRect R;
   R.Set(Bounds.right / 2 - kAppWidth / 2, Bounds.bottom / 2 - kAppHeight / 2,
         Bounds.right / 2 + kAppWidth / 2, Bounds.bottom / 2 + kAppHeight / 2);

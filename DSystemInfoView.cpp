@@ -127,28 +127,24 @@ DSystemInfoView::~DSystemInfoView(void)
 
 void
 DSystemInfoView::SetDevice(dev_t deviceID)
-// sets the device to show in the status bar
 {
   volumeInfo->SetTo(deviceID);
 }
 
 dev_t
 DSystemInfoView::GetDevice(void)
-// gets the device id
 {
   return volumeInfo->Device();
 }
 
 void
 DSystemInfoView::GetVolName(char* vol)
-// gets the name of the volume selected
 {
   volumeInfo->GetName(vol);
 }
 
 void
 DSystemInfoView::RebuildFileSystemMenu(void)
-// this is called when a volume is mounted/unmounted
 {  
   BMenu* Aux = new BMenu("Select a volume");
   ConstructVolumeMenu(Aux);
@@ -163,28 +159,24 @@ DSystemInfoView::RebuildFileSystemMenu(void)
 
 int64
 DSystemInfoView::VolumeCapacity(void)
-// returns the capacity of the volume selected
 {
   return volumeInfo->Capacity();
 }
 
 int64
 DSystemInfoView::VolumeFreeBytes(void)
-// returns the free bytes of the volume selected
 {
   return volumeInfo->FreeBytes();
 }
 
 void
 DSystemInfoView::Pulse()
-// update the status bars each 500 milisecs
 {
   UpdateSystemInfo();
 }
 
 void
 DSystemInfoView::Draw(BRect updateRect)
-// draw some lines in the view
 {
   BRect bounds = Bounds();
   SetHighColor(clGray);
@@ -221,7 +213,6 @@ DSystemInfoView::MessageReceived(BMessage* message)
 
 void
 DSystemInfoView::UpdateSystemInfo(void)
-// update the status bars
 {
   char volName[B_FILE_NAME_LENGTH];
   BString label, trailing;
@@ -266,7 +257,6 @@ DSystemInfoView::UpdateSystemInfo(void)
 
 void
 DSystemInfoView::UpdateFileSystemStatusBar(char* label, char* trailing, float Capacity, float FreeBytes)
-// update the file system status bar
 {
   fFileSystemSpace->Reset();
   fFileSystemSpace->SetMaxValue((float)Capacity);
@@ -384,7 +374,6 @@ DSystemInfoView::GetFSStatDev(void)
 
 void
 DSystemInfoView::ConstructVolumeMenu(BMenu* menu)
-// contruct the menu field with all the volumes mounted
 {
   BVolumeRoster volRoster;
   BVolume* volume = new BVolume();

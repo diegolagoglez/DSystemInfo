@@ -96,7 +96,6 @@ DSystemInfoWindow::MessageReceived(BMessage* message)
 
 bool
 DSystemInfoWindow::QuitRequested(void)
-// close the window and the app
 {
   be_app->PostMessage(B_QUIT_REQUESTED);
   return true;
