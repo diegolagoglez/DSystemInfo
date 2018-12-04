@@ -15,14 +15,21 @@ This is showed on a status bar too.
  - License: __GPLv2__
  - Original download page: [DSytemInfo at BeBits](http://bebits.com/app/1831)
 
-# Screenshot
+# Screenshots
+
+## Year 2000
 
 ![D System Info Screenshot](https://raw.github.com/diegolagoglez/DSystemInfo/master/art/dsysteminfo.jpg "D System Info Screenshot")
+
+## Year 2018
+
+![D System Info Screenshot](https://raw.github.com/diegolagoglez/DSystemInfo/master/art/dsysteminfo-final-after-18-years.png "D System Info Screenshot")
 
 # Changelog
 
 Release 0.2.6:
  - Version reset.
+ - Fixed some issues about memory.
  - Added Makefile.
 
 Release 2.5:
