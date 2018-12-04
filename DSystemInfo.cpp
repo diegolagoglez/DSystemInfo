@@ -2,7 +2,7 @@
 
 #include "DSystemInfo.h"
 
-DSystemInfo::DSystemInfo(const char* sig) : BApplication(sig)
+DSystemInfo::DSystemInfo() : BApplication(DSystemInfoSignature)
 {
   BScreen *Screen = new BScreen();  // center the app in the screen with next lines
   BRect Bounds(Screen->Frame());
